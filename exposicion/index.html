@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infografía Interactiva | FMI</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -60,17 +62,20 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-slate-900 to-blue-900 relative">
 
-    <div class="max-w-6xl w-full flex-grow flex flex-col justify-center">
+    <div class="max-w-7xl w-full flex-grow flex flex-col justify-center">
+        <!-- Encabezado -->
         <header class="text-center mb-12 mt-8 md:mt-0">
             <div class="inline-block mb-4 p-4 rounded-full glass-panel">
                 <svg class="w-12 h-12 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-wide">Fondo Monetario Internacional</h1>
-            <p class="text-xl text-blue-200 font-light">Guardián de la estabilidad económica mundial</p>
+            <p class="text-xl text-blue-200 font-light">El eje central de la red de seguridad financiera global</p>
         </header>
 
+        <!-- Contenedor Principal de la Infografía -->
         <div class="flex flex-col md:flex-row gap-8 mb-8">
             
+            <!-- Menú Interactivo (Navegación) -->
             <div class="w-full md:w-1/3 flex flex-col gap-4">
                 <button onclick="showTab('tab1')" id="btn-tab1" class="tab-btn active text-left px-6 py-5 rounded-xl border border-transparent glass-panel flex items-center justify-between">
                     <span class="text-lg font-semibold">Origen e Historia</span>
@@ -90,10 +95,13 @@
                 </button>
             </div>
 
-            <div class="w-full md:w-2/3 glass-panel rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl h-[550px] overflow-y-auto custom-scroll">
+            <!-- Área de Visualización de Contenido -->
+            <div class="w-full md:w-2/3 glass-panel rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl h-[650px] overflow-y-auto custom-scroll">
                 
+                <!-- Decoración de fondo -->
                 <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
 
+                <!-- Contenido Tab 1 -->
                 <div id="tab1" class="content-panel active relative z-10">
                     <h2 class="text-3xl font-bold mb-4 text-yellow-400">El Nacimiento de una Institución Global</h2>
                     
@@ -102,19 +110,29 @@
                         <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
                     </div>
 
-                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">El FMI es una organización internacional que actualmente cuenta con <strong class="text-white">191 países miembros</strong>. Nació de la necesidad de reconstruir el sistema económico tras devastadores conflictos bélicos y crisis financieras.</p>
+                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">Tras la devastación de la Segunda Guerra Mundial y el colapso económico de la Gran Depresión de los años 30, la comunidad internacional reconoció que la economía mundial necesitaba un "guardián" para evitar futuras catástrofes financieras.</p>
+                    
+                    <blockquote class="border-l-4 border-yellow-400 pl-4 mb-6 italic text-blue-200">
+                        "La prosperidad, al igual que la paz, es indivisible. No podemos tener un mundo donde algunos países prosperen a costa de la ruina de otros."
+                    </blockquote>
+
                     <ul class="space-y-5">
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">Conferencia de Bretton Woods (1944):</strong> Fue concebido en Estados Unidos por representantes de 44 países, liderados por las ideas de los economistas John Maynard Keynes y Harry Dexter White.</div>
+                            <div><strong class="text-white block text-lg mb-1">La Conferencia de Bretton Woods (1944):</strong> Representantes de 44 países aliados se reunieron en New Hampshire, EE. UU. El diseño del FMI fue impulsado principalmente por dos de los economistas más brillantes de la época: el británico <em>John Maynard Keynes</em> y el estadounidense <em>Harry Dexter White</em>.</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">Sede e Inicio:</strong> Inició operaciones formales en 1945 y su sede central se estableció en Washington D.C., a pocas cuadras del Banco Mundial.</div>
+                            <div><strong class="text-white block text-lg mb-1">Evolución del Sistema:</strong> Originalmente, el FMI vigilaba un sistema donde el valor de las monedas estaba atado al oro y al dólar. Cuando ese sistema colapsó en 1971, el FMI se adaptó para supervisar el actual sistema de "tipos de cambio flotantes".</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
+                            <div><strong class="text-white block text-lg mb-1">Alcance Actual:</strong> Hoy en día, tiene su sede en Washington D.C., cuenta con <strong>191 países miembros</strong> y emplea a miles de expertos económicos, matemáticos y analistas de todo el mundo.</div>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Contenido Tab 2 -->
                 <div id="tab2" class="content-panel relative z-10">
                     <h2 class="text-3xl font-bold mb-4 text-yellow-400">¿Qué busca lograr en el mundo?</h2>
                     
@@ -123,19 +141,25 @@
                         <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
                     </div>
 
-                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">A diferencia de un banco tradicional que busca generar ganancias, el FMI tiene un mandato macroeconómico para promover el crecimiento sostenible a nivel mundial.</p>
+                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">A diferencia del Banco Mundial (que financia proyectos de desarrollo como escuelas o puentes), el FMI es una institución <strong>macroeconómica</strong>. Su enfoque es la salud de la economía en su totalidad, no proyectos individuales.</p>
+
                     <ul class="space-y-5">
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">Estabilidad del Sistema Monetario:</strong> Su función primordial es garantizar la seguridad del sistema internacional de pagos y tipos de cambio.</div>
+                            <div><strong class="text-white block text-lg mb-1">Evitar Crisis de Balanza de Pagos:</strong> Su objetivo fundamental es asegurar que los países tengan suficientes divisas (dinero internacional) para seguir comprando importaciones vitales (como medicinas, petróleo o alimentos) sin caer en la quiebra.</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">Comercio y Desarrollo:</strong> Promueve políticas que eliminen restricciones, fomentando un mercado global fluido y aportando activamente a la reducción de la pobreza.</div>
+                            <div><strong class="text-white block text-lg mb-1">Frenar Devaluaciones Competitivas:</strong> Evitar las políticas de "empobrecer al vecino", donde un país devalúa artificialmente su moneda para vender más barato, lo que históricamente ha provocado guerras comerciales destructivas.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
+                            <div><strong class="text-white block text-lg mb-1">Crecimiento Sostenible y Pobreza:</strong> Al mantener la inflación bajo control y estabilizar la economía, el FMI crea el entorno necesario para que las empresas inviertan, se generen empleos de calidad y, en consecuencia, se reduzcan los índices de pobreza.</div>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Contenido Tab 3 -->
                 <div id="tab3" class="content-panel relative z-10">
                     <h2 class="text-3xl font-bold mb-4 text-yellow-400">Estructura, Dinero y Poder de Voto</h2>
                     
@@ -144,19 +168,29 @@
                         <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
                     </div>
 
-                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">Las decisiones clave y los fondos del FMI provienen de sus propios miembros. Actualmente es liderado por la Directora Gerente, <strong class="text-white">Kristalina Georgieva</strong>.</p>
+                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">El FMI funciona casi como una cooperativa de crédito mundial. El dinero que presta no viene del aire, sino de las reservas de los propios países miembros.</p>
+
+                    <div class="bg-blue-900/40 rounded-lg p-4 mb-6 border border-blue-400/20">
+                        <strong class="text-yellow-400">Dato clave:</strong> La actual Directora Gerente es <strong>Kristalina Georgieva</strong>. Tradicionalmente, el líder del FMI siempre ha sido europeo, mientras que el líder del Banco Mundial es estadounidense.
+                    </div>
+
                     <ul class="space-y-5">
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">El Sistema de Cuotas:</strong> Es la principal fuente de financiamiento. Al unirse, a cada país se le asigna una cuota calculada en base a su PIB y reservas internacionales.</div>
+                            <div><strong class="text-white block text-lg mb-1">La Fórmula de las Cuotas:</strong> Al ingresar, cada país paga una membresía. Esta se calcula con una fórmula que evalúa su PIB (50%), su apertura económica (30%), su variabilidad económica (15%) y sus reservas internacionales (5%).</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">El Valor del Voto y el DEG:</strong> En el FMI "el poder de voto es proporcional al capital aportado". Además, manejan un activo de reserva internacional llamado Derechos Especiales de Giro (DEG).</div>
+                            <div><strong class="text-white block text-lg mb-1">Votos Ponderados:</strong> En la ONU cada país tiene 1 voto. En el FMI, el voto equivale al dinero aportado. Estados Unidos posee aproximadamente el 16.5% del poder de voto, lo que en la práctica le otorga poder de veto sobre las decisiones más importantes de la organización.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
+                            <div><strong class="text-white block text-lg mb-1">El DEG (La "Moneda" del FMI):</strong> Los Derechos Especiales de Giro son un activo de reserva. Su valor se basa en una cesta de las 5 monedas más fuertes: <em>Dólar estadounidense, Euro, Yuan chino, Yen japonés y Libra esterlina</em>.</div>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Contenido Tab 4 -->
                 <div id="tab4" class="content-panel relative z-10">
                     <h2 class="text-3xl font-bold mb-4 text-yellow-400">¿Cómo ejecuta su misión?</h2>
                     
@@ -165,19 +199,20 @@
                         <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
                     </div>
 
-                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">Para mantener la maquinaria económica global funcionando, el FMI trabaja en el día a día a través de tres herramientas prácticas e interconectadas.</p>
+                    <p class="text-lg text-blue-100 mb-6 leading-relaxed">Para evitar crisis o ayudar a los países a salir de ellas, el FMI emplea un enfoque de tres herramientas, conocido internamente como sus "Tres Pilares de Acción".</p>
+
                     <ul class="space-y-5">
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">1. Supervisión (Artículo IV):</strong> Actúa como el auditor de la economía mundial, enviando expertos a revisar finanzas y alertar sobre posibles crisis.</div>
+                            <div><strong class="text-white block text-lg mb-1">1. Supervisión (El Médico Preventivo):</strong> Bajo el llamado <em>Artículo IV</em>, equipos de economistas visitan cada país miembro anualmente. Analizan impuestos, gasto público e inflación, y publican un reporte público advirtiendo sobre riesgos antes de que se conviertan en crisis.</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">2. Asistencia Financiera:</strong> Otorga préstamos de emergencia a países sin liquidez, a cambio de que apliquen programas de austeridad y reformas.</div>
+                            <div><strong class="text-white block text-lg mb-1">2. Préstamos (El Bombero Financiero):</strong> Cuando un país no puede pagar sus deudas, el FMI otorga créditos de rescate. Sin embargo, aplica la <strong>"Condicionalidad"</strong>: el dinero se entrega por fases y solo si el gobierno se compromete a realizar reformas estructurales duras (como reducir el gasto público, combatir la corrupción o reformar impuestos).</div>
                         </li>
                         <li class="flex items-start">
                             <span class="text-yellow-400 mr-4 mt-1 text-xl">✦</span>
-                            <div><strong class="text-white block text-lg mb-1">3. Fortalecimiento de Capacidades:</strong> Brinda educación gratuita y asesoramiento técnico a los gobiernos y bancos centrales.</div>
+                            <div><strong class="text-white block text-lg mb-1">3. Desarrollo de Capacidades (El Profesor):</strong> Representa casi el 30% del presupuesto del FMI. Implica enviar expertos a países en desarrollo para enseñarles a sus funcionarios cómo modernizar un banco central, cómo recaudar impuestos de forma más justa o cómo crear estadísticas económicas confiables.</div>
                         </li>
                     </ul>
                 </div>
@@ -185,11 +220,13 @@
             </div>
         </div>
         
+        <!-- Pie de página (Grupo 5) -->
         <footer class="text-center mt-auto pb-4">
             <span class="text-xs tracking-widest text-blue-200/40 uppercase font-semibold">Grupo 5</span>
         </footer>
     </div>
 
+    <!-- Script de Interactividad -->
     <script>
         function showTab(tabId) {
             // Ocultar todos los paneles
